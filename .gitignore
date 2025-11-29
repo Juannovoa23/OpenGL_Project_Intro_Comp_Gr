@@ -1,0 +1,24 @@
+# Build & intermediates
+build/
+cmake-build-debug/
+
+# Editors & IDEs
+.idea/
+
+# MacOS
+.DS_Store
+
+/build/
+/out/
+/Debug/
+/Release/
+/.vs/
+/*.exe
+/*.obj
+/*.pdb
+/*.ilk
+*.log
+*.cache
+*.vcxproj.user
+CMakeFiles/
+CMakeCache.txt
