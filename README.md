@@ -1,65 +1,82 @@
-# OpenGL: Hello Triangle
+# Explorador de Formas 3D – OpenGL
 
-<div float="left">
-  <img src="./img/triangle.png" width="800" />
-</div>
+Proyecto en C++/OpenGL 3.3 que implementa un **visor interactivo** capaz de mostrar y transformar en tiempo real:
 
-# Description
+- Cubo  
+- Esfera  
+- Pirámide  
+- Toro  
 
-A basic example of rendering a triangle using C++ and OpenGL.
+Incluye iluminación Phong, materiales intercambiables, rotación, escalado y cambio dinámico de color.
 
-The app creates a window using the [GLFW][glfw] library, loads OpenGL function pointers using the [GLAD][glad] library, and renders a triangle using a simple GLSL shader and shader class.
+---
 
-# Prerequisites&nbsp;:vertical_traffic_light:
+## 🚀 Características principales
 
-- [Git][git]
-- [CMake][cmake]
-- C++ compiler
-    - Windows: [MSVC][msvc] (Bundled with [Visual Studio][msvs])
-    - MacOS: [Clang][clang] (Bundled with [Xcode][xcode])
-    - Linux: [GCC][gcc]
+- Renderizado moderno con **OpenGL Core 3.3**
+- **GLFW** para la ventana y entrada de usuario
+- **GLAD** para cargar funciones OpenGL
+- **GLM** para matrices y vectores
+- Geometría generada manualmente (sin modelos externos)
+- Iluminación Phong (ambient + diffuse + specular)
+- Transformaciones en tiempo real
 
-# Getting started&nbsp;:runner:
+---
 
-### Getting the code&nbsp;:octocat:
+## 🎮 Controles
 
-- Clone the repository: `git clone https://github.com/taardal/opengl-triangle`
+| Tecla | Acción |
+|------|---------|
+| 1 | Cubo |
+| 2 | Esfera |
+| 3 | Pirámide |
+| 4 | Toro |
+| W / S | Rotar en eje X |
+| A / D | Rotar en eje Y |
+| Q / E | Rotar en eje Z |
+| + / - | Escalar |
+| C | Cambiar color |
+| M | Cambiar material |
+| R | Reset |
 
-### Running the app&nbsp;:rocket:
+---
 
-- Generate project files: `cmake -S . -B build`
-- Build executable from generated files: `cmake --build build`
-- Run the executable: `./build/opengltriangle`
+## 📁 Estructura del Proyecto
 
-# Resources&nbsp;:books:
+/src
+main.cpp
+Shader.cpp
+Shader.h
+/shaders
+vertex_shader.glsl
+fragment_shader.glsl
+/lib
+glad/
+glfw/
+glm/
+/build
+CMakeLists.txt
+README.md
 
-### Tools
+yaml
+Copiar código
 
-- [CMake][cmake] (Build tool)
+---
 
-### Dependencies
+## 🔧 Compilación
 
-- [GLFW][glfw] (Window management)
-- [GLAD][glad] (OpenGL initialization)
+En consola:
 
-### Knowledge
+```bash
+cmake -S . -B build -A x64
+cmake --build build --config Debug
+Ejecutar:
 
-- [The Cherno: OpenGL][thecherno:opengl] (YouTube)
-- [The Cherno: C++][thecherno:cpp] (YouTube)
-- [OpenGL Tutorial][opengltutorial] (Website)
-- [Learn OpenGL][learnopengl] (Website)
+bash
+Copiar código
+./build/Debug/opengltriangle.exe
+📜 Licencia
+Este proyecto es educativo y puede ser reutilizado libremente citando al autor.
 
-
-[clang]: http://clang.org/
-[cmake]: https://cmake.org/
-[gcc]: https://gcc.gnu.org/
-[git]: https://git-scm.com
-[glad]: https://github.com/Dav1dde/glad
-[glfw]: https://www.glfw.org/
-[learnopengl]: https://learnopengl.com/
-[msvc]: https://visualstudio.microsoft.com/vs/features/cplusplus/
-[msvs]: https://visualstudio.microsoft.com/
-[opengltutorial]: http://www.opengl-tutorial.org/
-[thecherno:opengl]: https://www.youtube.com/watch?v=W3gAzLwfIP0&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&ab_channel=TheCherno
-[thecherno:cpp]: https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&ab_channel=TheCherno
-[xcode]: https://developer.apple.com/xcode/
+👨‍💻 Autor
+juan sebastian novoa garcia
